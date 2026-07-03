@@ -1,44 +1,19 @@
-# 🏢 Sistema da Empresa (Demo com Erro)
+# O que o meu sistema faz?
 
-Este projeto é um sistema simples de painel de empresa feito em **HTML, CSS e JavaScript**, criado com o objetivo de demonstrar comportamento de erro em tempo de execução.
+Este sistema é um mural de recados que permite aos usuários cadastrar e visualizar mensagens.
+As informações são armazenadas em um banco de dados para que permaneçam disponíveis mesmo após o fechamento do site.
 
----
+# Como rodar o projeto?
 
-## ⚠️ Funcionalidade
+1. Clone o repositório.
+2. Instale as dependências do projeto (se houver).
+3. Configure as variáveis de ambiente na Vercel.
+4. Importe o banco de dados.
+5. Execute o projeto localmente ou faça o deploy na Vercel.
 
-O sistema possui:
+# Se o site cair, o que fazer?
 
-- Painel de funcionários
-- Painel financeiro
-- Sistema de inicialização automático
-- Tratamento básico de erro
-
----
-
-## 💥 Erro proposital
-
-Este projeto contém erros intencionais para simular falhas:
-
-- Função `obterDadosDoServidor()` não existe
-- Variável `totalFuncionariosEmpresa` não foi definida
-
-Isso faz com que o sistema:
-- Exiba erro na tela
-- Registre falha no carregamento dos dados
-
----
-
-## 📌 Objetivo
-
-- Treinamento de debug
-- Testes de console do navegador
-- Simulação de falhas em sistemas web
-- Uso educacional
-
----
-
-## 🚀 Como executar
-
-1. Baixe ou clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+1. Acesse o painel da Vercel.
+2. Verifique os logs para identificar o erro.
+3. Clique em **Rollback** para restaurar a última versão estável, caso necessário.
+4. Confirme se o banco de dados e as variáveis de ambiente continuam configurados corretamente.
