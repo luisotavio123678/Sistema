@@ -1,37 +1,44 @@
-# 🚨 Sistema Corporativo
+# 🏢 Sistema da Empresa (Demo com Erro)
 
-## ⚠️ Erro Crítico no Sistema
-
-O sistema da empresa encontra-se temporariamente indisponível.
+Este projeto é um sistema simples de painel de empresa feito em **HTML, CSS e JavaScript**, criado com o objetivo de demonstrar comportamento de erro em tempo de execução.
 
 ---
 
-### 📛 Detalhes do erro
-- Código: `500 - Internal Server Error`
-- Serviço: Sistema Corporativo ERP
-- Status: 🔴 Fora do ar
-- Última verificação: Automática
+## ⚠️ Funcionalidade
+
+O sistema possui:
+
+- Painel de funcionários
+- Painel financeiro
+- Sistema de inicialização automático
+- Tratamento básico de erro
 
 ---
 
-### 🛠️ O que está acontecendo?
-Estamos enfrentando instabilidades nos servidores principais do sistema.
+## 💥 Erro proposital
 
-Nossa equipe de TI já foi notificada e está trabalhando para restaurar o serviço o mais rápido possível.
+Este projeto contém erros intencionais para simular falhas:
 
----
+- Função `obterDadosDoServidor()` não existe
+- Variável `totalFuncionariosEmpresa` não foi definida
 
-### ⏳ O que você pode fazer?
-- Tentar novamente em alguns minutos
-- Verificar sua conexão com a internet
-- Entrar em contato com o suporte técnico da empresa
-
----
-
-### 📞 Suporte
-Email: suporte@empresa.com  
-Telefone: (00) 0000-0000
+Isso faz com que o sistema:
+- Exiba erro na tela
+- Registre falha no carregamento dos dados
 
 ---
 
-> ⚠️ Este é um sistema simulado de demonstração. Nenhum dado foi afetado.
+## 📌 Objetivo
+
+- Treinamento de debug
+- Testes de console do navegador
+- Simulação de falhas em sistemas web
+- Uso educacional
+
+---
+
+## 🚀 Como executar
+
+1. Baixe ou clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
