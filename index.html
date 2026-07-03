@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmpresaTech - Sistema Empresarial</title>
+    <title>Sistema de Empresa</title>
 
     <style>
         *{
@@ -15,62 +16,58 @@
 
         body{
             background:#f4f4f4;
+            color:#333;
         }
 
         header{
-            background:#1e3a8a;
-            color:white;
-            padding:20px;
+            background:#0d6efd;
+            color:#fff;
+            padding:30px;
             text-align:center;
         }
 
-        nav{
-            background:#0f172a;
-            padding:15px;
-            text-align:center;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:15px;
-            font-weight:bold;
-        }
-
-        .container{
-            width:90%;
-            max-width:1000px;
+        main{
+            max-width:900px;
             margin:40px auto;
-        }
-
-        .card{
-            background:white;
-            padding:25px;
-            margin-bottom:20px;
+            background:#fff;
+            padding:30px;
             border-radius:10px;
-            box-shadow:0 5px 15px rgba(0,0,0,.1);
+            box-shadow:0 0 10px rgba(0,0,0,.1);
         }
 
-        button{
-            padding:12px 20px;
-            border:none;
-            border-radius:8px;
-            background:#2563eb;
-            color:white;
-            cursor:pointer;
-            font-size:16px;
+        section{
+            margin-bottom:30px;
         }
 
-        button:hover{
-            background:#1d4ed8;
+        h2{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+
+        ul{
+            margin-left:20px;
         }
 
         footer{
-            background:#111827;
-            color:white;
             text-align:center;
             padding:20px;
-            margin-top:40px;
+            background:#0d6efd;
+            color:#fff;
+            margin-top:30px;
+        }
+
+        .botao{
+            display:inline-block;
+            margin-top:20px;
+            background:#0d6efd;
+            color:#fff;
+            padding:12px 20px;
+            text-decoration:none;
+            border-radius:6px;
+        }
+
+        .botao:hover{
+            background:#0b5ed7;
         }
     </style>
 </head>
@@ -78,63 +75,65 @@
 <body>
 
 <header>
-    <h1>EmpresaTech</h1>
-    <p>Sistema Empresarial</p>
+    <h1>Sistema de Empresa</h1>
+    <p>Mural de Recados com Banco de Dados</p>
 </header>
 
-<nav>
-    <a href="#">Início</a>
-    <a href="#">Funcionários</a>
-    <a href="#">Clientes</a>
-    <a href="#">Produtos</a>
-    <a href="#">Contato</a>
-</nav>
+<main>
 
-<div class="container">
+<section>
+<h2>Sobre o Projeto</h2>
 
-    <div class="card">
-        <h2>Bem-vindo!</h2>
+<p>
+Este sistema foi desenvolvido para permitir o cadastro, armazenamento e gerenciamento de recados utilizando um banco de dados.
+Seu objetivo é facilitar o controle das mensagens de maneira simples, organizada e segura.
+</p>
 
-        <p>
-            Este é um sistema empresarial desenvolvido em HTML.
-            Ele pode ser expandido para controlar clientes,
-            funcionários, estoque, vendas e relatórios.
-        </p>
+</section>
 
-        <br>
+<section>
 
-        <button onclick="mensagem()">
-            Entrar no Sistema
-        </button>
-    </div>
+<h2>Funcionalidades</h2>
 
-    <div class="card">
-        <h2>Funcionalidades</h2>
+<ul>
+<li>Cadastrar recados</li>
+<li>Visualizar mensagens</li>
+<li>Salvar informações no banco de dados</li>
+<li>Interface simples e intuitiva</li>
+<li>Preparado para deploy na Vercel</li>
+</ul>
 
-        <ul>
-            <li>Cadastro de Clientes</li>
-            <li>Cadastro de Funcionários</li>
-            <li>Controle de Produtos</li>
-            <li>Controle de Estoque</li>
-            <li>Relatórios</li>
-            <li>Dashboard</li>
-        </ul>
+</section>
 
-    </div>
+<section>
 
-</div>
+<h2>Tecnologias</h2>
+
+<ul>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>PHP</li>
+<li>Banco de Dados SQL</li>
+<li>Vercel</li>
+</ul>
+
+</section>
+
+<a href="#" class="botao">
+Acessar Sistema
+</a>
+
+</main>
 
 <footer>
-    © 2026 EmpresaTech - Todos os direitos reservados.
+
+<p>
+© 2026 Sistema de Empresa - Todos os direitos reservados.
+</p>
+
 </footer>
-
-<script>
-
-function mensagem(){
-    alert("Bem-vindo ao Sistema Empresarial!");
-}
-
-</script>
 
 </body>
 </html>
+```
