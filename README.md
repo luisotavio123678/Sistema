@@ -1,70 +1,95 @@
-# 💼 Sistema Empresarial
+````markdown
+# 📌 Sistema de Empresa
 
-## 📌 Descrição
+## 📖 O que o meu sistema faz?
 
-Este projeto é um sistema empresarial desenvolvido em HTML.
+Este sistema funciona como um mural de recados que permite cadastrar, armazenar e gerenciar mensagens em um banco de dados.
 
-O objetivo é servir como base para empresas que desejam gerenciar clientes, funcionários, produtos e estoque de forma organizada.
-
----
-
-## 🚀 Funcionalidades
-
-- Cadastro de Clientes
-- Cadastro de Funcionários
-- Cadastro de Produtos
-- Controle de Estoque
-- Dashboard
-- Relatórios
-- Interface Responsiva
+Seu objetivo é facilitar a organização das informações de forma simples, rápida e segura.
 
 ---
 
-## 🛠 Tecnologias
+# 🚀 Como rodar o projeto?
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
+
+2. Acesse a pasta do projeto.
+
+3. Configure as variáveis de ambiente na Vercel.
+
+4. Importe o banco de dados.
+
+5. Execute o projeto em ambiente local ou realize o deploy.
+
+---
+
+# 🛠 Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
+- PHP
+- SQL
+- Vercel
 
 ---
 
-## 📂 Estrutura
+# 📂 Estrutura do Projeto
 
 ```
 /
 │── index.html
 │── README.md
+│── css/
+│── js/
+│── php/
+│── database/
 ```
 
 ---
 
-## ▶ Como executar
+# 🔄 Se o site cair, o que fazer?
 
-1. Faça o download ou clone o repositório.
-2. Abra o arquivo **index.html** em qualquer navegador.
-3. O sistema será iniciado imediatamente.
+1. Entre no painel da Vercel.
+2. Acesse o projeto.
+3. Abra a aba **Deployments**.
+4. Escolha a última versão estável.
+5. Clique em **Rollback**.
+6. Aguarde a restauração do sistema.
 
 ---
 
-## 📈 Melhorias Futuras
+# 🧹 Refatoração
 
-- Login de usuários
-- Banco de Dados
-- Cadastro completo
-- Controle Financeiro
-- API
-- Painel Administrativo
-- Gráficos
-- Exportação para PDF
+Durante o desenvolvimento, utilize nomes de variáveis claros e descritivos.
+
+### Exemplo
+
+**Antes**
+
+```php
+$a
+$dado_x
+$msg
+```
+
+**Depois**
+
+```php
+$nomeUsuario
+$dataCriacao
+$mensagemUsuario
+```
+
+Isso facilita a manutenção e torna o código mais organizado.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Luís Otávio Silva Chagas**.
-
----
-
-## 📄 Licença
-
-Projeto destinado para estudos e desenvolvimento.
+Projeto desenvolvido para fins de estudo e aprendizado utilizando GitHub e Vercel.
+````
