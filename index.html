@@ -1,38 +1,192 @@
-# Sistema-Empresa
-<div align="center">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema da Empresa</title>
 
-# 🚨 ERRO CRÍTICO 500
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-## 🔴 Sistema Fora do Ar
+    body {
+      background: #f4f6f9;
+    }
 
-<img src="https://img.shields.io/badge/Status-Offline-red?style=for-the-badge" alt="Status Offline">
+    /* Layout */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
 
-<br><br>
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+    }
 
-> ⚠️ **O servidor está temporariamente indisponível.**
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
 
-Estamos trabalhando para restabelecer o serviço o mais rápido possível.
+    .sidebar ul {
+      list-style: none;
+    }
 
----
+    .sidebar ul li {
+      margin: 15px 0;
+    }
 
-### 📌 Situação Atual
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
 
-| Serviço | Status |
-|---------|:------:|
-| 🌐 Servidor | 🔴 Offline |
-| ⚙️ API | 🔴 Indisponível |
-| 🗄️ Banco de Dados | 🔴 Offline |
+    .sidebar ul li a:hover {
+      color: #38bdf8;
+    }
 
----
+    /* Main */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
 
-### 🔄 O que fazer?
+    /* Header */
+    .header {
+      margin-bottom: 20px;
+    }
 
-- ⏳ Aguarde alguns minutos.
-- 🔁 Atualize a página.
-- 📡 Tente novamente mais tarde.
+    /* Cards */
+    .cards {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
 
----
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-### ❤️ Agradecemos pela compreensão.
+    /* Table */
+    .table-section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-</div>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background: #f1f5f9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>EmpresaX</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Funcionários</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Relatórios</a></li>
+          <li><a href="#">Configurações</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="header">
+        <h1>Dashboard</h1>
+        <p>Bem-vindo ao sistema da empresa</p>
+      </header>
+
+      <!-- Cards -->
+      <section class="cards">
+        <div class="card">
+          <h3>Funcionários</h3>
+          <p>120</p>
+        </div>
+
+        <div class="card">
+          <h3>Projetos</h3>
+          <p>8 ativos</p>
+        </div>
+
+        <div class="card">
+          <h3>Faturamento</h3>
+          <p>R$ 45.000</p>
+        </div>
+      </section>
+
+      <!-- Table -->
+      <section class="table-section">
+        <h2>Últimos Projetos</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Status</th>
+              <th>Responsável</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Sistema Interno</td>
+              <td>Em andamento</td>
+              <td>João Silva</td>
+            </tr>
+
+            <tr>
+              <td>Site Institucional</td>
+              <td>Concluído</td>
+              <td>Maria Souza</td>
+            </tr>
+
+            <tr>
+              <td>App Mobile</td>
+              <td>Planejamento</td>
+              <td>Carlos Lima</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
