@@ -6,13 +6,12 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
+      background: #f4f4f4;
     }
 
     header {
-      background-color: #2c3e50;
+      background: #2c3e50;
       color: white;
       padding: 20px;
       text-align: center;
@@ -31,10 +30,12 @@
     }
 
     .error {
-      background: #ffdddd;
+      display: none;
+      background: #ffe0e0;
       border-left: 5px solid red;
       padding: 10px;
       margin-top: 20px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -48,7 +49,7 @@
 <div class="container">
   <div class="card">
     <h2>Funcionários</h2>
-    <p>Total: <span id="totalFuncionarios"></span></p>
+    <p>Total: <span id="totalFuncionarios">--</span></p>
   </div>
 
   <div class="card">
@@ -56,7 +57,7 @@
     <p>Status: OK</p>
   </div>
 
-  <div id="erroSistema" class="error" style="display:none;"></div>
+  <div id="erroSistema" class="error"></div>
 </div>
 
 <script>
@@ -65,20 +66,19 @@
       carregarDados();
       atualizarDashboard();
     } catch (e) {
-      document.getElementById("erroSistema").style.display = "block";
-      document.getElementById("erroSistema").innerHTML =
-        "❌ Erro crítico no sistema: " + e.message;
+      const erro = document.getElementById("erroSistema");
+      erro.style.display = "block";
+      erro.innerText = "Erro no sistema: " + e.message;
     }
   }
 
   function carregarDados() {
-    // ERRO PROPOSITAL: função não existe
-    const dados = obterDadosDoServidor(); 
-    return dados;
+    // ERRO PROPOSITAL (função inexistente)
+    obterDadosDoServidor();
   }
 
   function atualizarDashboard() {
-    // ERRO PROPOSITAL: variável inexistente
+    // ERRO PROPOSITAL (variável não definida)
     document.getElementById("totalFuncionarios").innerText = totalFuncionariosEmpresa;
   }
 </script>
