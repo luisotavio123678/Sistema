@@ -1,86 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Sistema da Empresa</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpresaTech - Sistema Empresarial</title>
 
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
 
-    .container {
-      padding: 20px;
-    }
+        body{
+            background:#f4f4f4;
+        }
 
-    .card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+        header{
+            background:#1e3a8a;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
 
-    .error {
-      display: none;
-      background: #ffe0e0;
-      border-left: 5px solid red;
-      padding: 10px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
+        nav{
+            background:#0f172a;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:40px auto;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,.1);
+        }
+
+        button{
+            padding:12px 20px;
+            border:none;
+            border-radius:8px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+    </style>
 </head>
 
-<body onload="inicializarSistema()">
+<body>
 
 <header>
-  <h1>Painel da Empresa</h1>
+    <h1>EmpresaTech</h1>
+    <p>Sistema Empresarial</p>
 </header>
 
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Funcionários</a>
+    <a href="#">Clientes</a>
+    <a href="#">Produtos</a>
+    <a href="#">Contato</a>
+</nav>
+
 <div class="container">
-  <div class="card">
-    <h2>Funcionários</h2>
-    <p>Total: <span id="totalFuncionarios">--</span></p>
-  </div>
 
-  <div class="card">
-    <h2>Financeiro</h2>
-    <p>Status: OK</p>
-  </div>
+    <div class="card">
+        <h2>Bem-vindo!</h2>
 
-  <div id="erroSistema" class="error"></div>
+        <p>
+            Este é um sistema empresarial desenvolvido em HTML.
+            Ele pode ser expandido para controlar clientes,
+            funcionários, estoque, vendas e relatórios.
+        </p>
+
+        <br>
+
+        <button onclick="mensagem()">
+            Entrar no Sistema
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Funcionalidades</h2>
+
+        <ul>
+            <li>Cadastro de Clientes</li>
+            <li>Cadastro de Funcionários</li>
+            <li>Controle de Produtos</li>
+            <li>Controle de Estoque</li>
+            <li>Relatórios</li>
+            <li>Dashboard</li>
+        </ul>
+
+    </div>
+
 </div>
 
+<footer>
+    © 2026 EmpresaTech - Todos os direitos reservados.
+</footer>
+
 <script>
-  function inicializarSistema() {
-    try {
-      carregarDados();
-      atualizarDashboard();
-    } catch (e) {
-      const erro = document.getElementById("erroSistema");
-      erro.style.display = "block";
-      erro.innerText = "Erro no sistema: " + e.message;
-    }
-  }
 
-  function carregarDados() {
-    // ERRO PROPOSITAL (função inexistente)
-    obterDadosDoServidor();
-  }
+function mensagem(){
+    alert("Bem-vindo ao Sistema Empresarial!");
+}
 
-  function atualizarDashboard() {
-    // ERRO PROPOSITAL (variável não definida)
-    document.getElementById("totalFuncionarios").innerText = totalFuncionariosEmpresa;
-  }
 </script>
 
 </body>
