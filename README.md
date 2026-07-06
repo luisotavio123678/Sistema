@@ -1,95 +1,84 @@
-````markdown
-# 📌 Sistema de Empresa
+# 🏢 Sistema de Gestão Empresarial
 
-## 📖 O que o meu sistema faz?
-
-Este sistema funciona como um mural de recados que permite cadastrar, armazenar e gerenciar mensagens em um banco de dados.
-
-Seu objetivo é facilitar a organização das informações de forma simples, rápida e segura.
+Um sistema empresarial desenvolvido em HTML, CSS e JavaScript para servir como base de um painel administrativo.
 
 ---
 
-# 🚀 Como rodar o projeto?
+## 📋 Funcionalidades
 
-1. Clone este repositório:
+- Dashboard Administrativo
+- Gestão de Funcionários
+- Controle de Estoque
+- Gestão Financeira
+- Relatórios
+- Interface Responsiva
+- Código simples e organizado
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+Sistema-Empresarial/
+│
+├── index.html
+├── README.md
+```
+
+---
+
+## ▶️ Como Executar
+
+1. Faça o download ou clone este repositório.
 
 ```bash
 git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
 ```
 
-2. Acesse a pasta do projeto.
-
-3. Configure as variáveis de ambiente na Vercel.
-
-4. Importe o banco de dados.
-
-5. Execute o projeto em ambiente local ou realize o deploy.
+2. Abra o arquivo **index.html** em qualquer navegador moderno.
 
 ---
 
-# 🛠 Tecnologias
+## 📈 Futuras Implementações
 
-- HTML5
-- CSS3
-- JavaScript
-- PHP
-- SQL
-- Vercel
-
----
-
-# 📂 Estrutura do Projeto
-
-```
-/
-│── index.html
-│── README.md
-│── css/
-│── js/
-│── php/
-│── database/
-```
+- Sistema de Login
+- Cadastro de Clientes
+- Cadastro de Produtos
+- Banco de Dados
+- API REST
+- Controle Financeiro Completo
+- Gráficos em Tempo Real
+- Exportação para PDF e Excel
+- Controle de Permissões
+- Modo Escuro
 
 ---
 
-# 🔄 Se o site cair, o que fazer?
+## 🤝 Contribuições
 
-1. Entre no painel da Vercel.
-2. Acesse o projeto.
-3. Abra a aba **Deployments**.
-4. Escolha a última versão estável.
-5. Clique em **Rollback**.
-6. Aguarde a restauração do sistema.
+Contribuições são bem-vindas.
+
+1. Faça um Fork
+2. Crie uma Branch
+3. Faça suas alterações
+4. Abra um Pull Request
 
 ---
 
-# 🧹 Refatoração
+## 📄 Licença
 
-Durante o desenvolvimento, utilize nomes de variáveis claros e descritivos.
-
-### Exemplo
-
-**Antes**
-
-```php
-$a
-$dado_x
-$msg
-```
-
-**Depois**
-
-```php
-$nomeUsuario
-$dataCriacao
-$mensagemUsuario
-```
-
-Isso facilita a manutenção e torna o código mais organizado.
+Este projeto está disponível sob a licença MIT.
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para fins de estudo e aprendizado utilizando GitHub e Vercel.
-````
+Desenvolvido por **Seu Nome**.
