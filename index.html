@@ -1,139 +1,153 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Empresa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Empresa</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        body{
-            background:#f4f4f4;
-            color:#333;
-        }
+body{
+    background:#f4f6f9;
+    color:#333;
+}
 
-        header{
-            background:#0d6efd;
-            color:#fff;
-            padding:30px;
-            text-align:center;
-        }
+header{
+    background:#0d6efd;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+}
 
-        main{
-            max-width:900px;
-            margin:40px auto;
-            background:#fff;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.1);
-        }
+nav{
+    background:#084298;
+    padding:12px;
+    text-align:center;
+}
 
-        section{
-            margin-bottom:30px;
-        }
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
 
-        h2{
-            color:#0d6efd;
-            margin-bottom:10px;
-        }
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
 
-        ul{
-            margin-left:20px;
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
 
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#0d6efd;
-            color:#fff;
-            margin-top:30px;
-        }
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
 
-        .botao{
-            display:inline-block;
-            margin-top:20px;
-            background:#0d6efd;
-            color:#fff;
-            padding:12px 20px;
-            text-decoration:none;
-            border-radius:6px;
-        }
+.card:hover{
+    transform:translateY(-5px);
+}
 
-        .botao:hover{
-            background:#0b5ed7;
-        }
-    </style>
+.card h2{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+button{
+    margin-top:15px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+footer{
+    margin-top:40px;
+    background:#212529;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Sistema de Empresa</h1>
-    <p>Mural de Recados com Banco de Dados</p>
+    <h1>Sistema de Gestão Empresarial</h1>
+    <p>Painel Administrativo da Empresa</p>
 </header>
 
-<main>
+<nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Funcionários</a>
+    <a href="#">Clientes</a>
+    <a href="#">Financeiro</a>
+    <a href="#">Estoque</a>
+    <a href="#">Relatórios</a>
+</nav>
 
-<section>
-<h2>Sobre o Projeto</h2>
+<div class="container">
 
-<p>
-Este sistema foi desenvolvido para permitir o cadastro, armazenamento e gerenciamento de recados utilizando um banco de dados.
-Seu objetivo é facilitar o controle das mensagens de maneira simples, organizada e segura.
-</p>
+<div class="cards">
 
-</section>
+<div class="card">
+<h2>👥 Funcionários</h2>
+<p>Gerencie colaboradores, cargos e departamentos.</p>
+<button onclick="abrir('Funcionários')">Acessar</button>
+</div>
 
-<section>
+<div class="card">
+<h2>📦 Estoque</h2>
+<p>Controle produtos, entradas e saídas.</p>
+<button onclick="abrir('Estoque')">Acessar</button>
+</div>
 
-<h2>Funcionalidades</h2>
+<div class="card">
+<h2>💰 Financeiro</h2>
+<p>Gerencie receitas, despesas e fluxo de caixa.</p>
+<button onclick="abrir('Financeiro')">Acessar</button>
+</div>
 
-<ul>
-<li>Cadastrar recados</li>
-<li>Visualizar mensagens</li>
-<li>Salvar informações no banco de dados</li>
-<li>Interface simples e intuitiva</li>
-<li>Preparado para deploy na Vercel</li>
-</ul>
+<div class="card">
+<h2>📊 Relatórios</h2>
+<p>Visualize indicadores e desempenho da empresa.</p>
+<button onclick="abrir('Relatórios')">Acessar</button>
+</div>
 
-</section>
+</div>
 
-<section>
-
-<h2>Tecnologias</h2>
-
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-<li>PHP</li>
-<li>Banco de Dados SQL</li>
-<li>Vercel</li>
-</ul>
-
-</section>
-
-<a href="#" class="botao">
-Acessar Sistema
-</a>
-
-</main>
+</div>
 
 <footer>
-
-<p>
-© 2026 Sistema de Empresa - Todos os direitos reservados.
-</p>
-
+© 2026 - Sistema de Gestão Empresarial
 </footer>
+
+<script>
+function abrir(modulo){
+    alert("Abrindo módulo: " + modulo);
+}
+</script>
 
 </body>
 </html>
-```
