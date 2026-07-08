@@ -1,153 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Empresa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise System</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <link rel="stylesheet" href="style.css">
 
-body{
-    background:#f4f6f9;
-    color:#333;
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
-header{
-    background:#0d6efd;
-    color:#fff;
-    padding:20px;
-    text-align:center;
-}
-
-nav{
-    background:#084298;
-    padding:12px;
-    text-align:center;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:30px auto;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h2{
-    color:#0d6efd;
-    margin-bottom:10px;
-}
-
-button{
-    margin-top:15px;
-    background:#0d6efd;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#084298;
-}
-
-footer{
-    margin-top:40px;
-    background:#212529;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-}
-</style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <h1>Sistema de Gestão Empresarial</h1>
-    <p>Painel Administrativo da Empresa</p>
-</header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-<nav>
-    <a href="#">Dashboard</a>
-    <a href="#">Funcionários</a>
-    <a href="#">Clientes</a>
-    <a href="#">Financeiro</a>
-    <a href="#">Estoque</a>
-    <a href="#">Relatórios</a>
-</nav>
+        <div class="logo">
+            <i class="fa-solid fa-building"></i>
+            <span>Enterprise</span>
+        </div>
 
-<div class="container">
+        <nav>
 
-<div class="cards">
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
 
-<div class="card">
-<h2>👥 Funcionários</h2>
-<p>Gerencie colaboradores, cargos e departamentos.</p>
-<button onclick="abrir('Funcionários')">Acessar</button>
-</div>
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                Clientes
+            </a>
 
-<div class="card">
-<h2>📦 Estoque</h2>
-<p>Controle produtos, entradas e saídas.</p>
-<button onclick="abrir('Estoque')">Acessar</button>
-</div>
+            <a href="#">
+                <i class="fa-solid fa-user-tie"></i>
+                Funcionários
+            </a>
 
-<div class="card">
-<h2>💰 Financeiro</h2>
-<p>Gerencie receitas, despesas e fluxo de caixa.</p>
-<button onclick="abrir('Financeiro')">Acessar</button>
-</div>
+            <a href="#">
+                <i class="fa-solid fa-box"></i>
+                Estoque
+            </a>
 
-<div class="card">
-<h2>📊 Relatórios</h2>
-<p>Visualize indicadores e desempenho da empresa.</p>
-<button onclick="abrir('Relatórios')">Acessar</button>
-</div>
+            <a href="#">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Financeiro
+            </a>
 
-</div>
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+                Relatórios
+            </a>
 
-</div>
+            <a href="#">
+                <i class="fa-solid fa-calendar-days"></i>
+                Agenda
+            </a>
 
-<footer>
-© 2026 - Sistema de Gestão Empresarial
-</footer>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </a>
 
-<script>
-function abrir(modulo){
-    alert("Abrindo módulo: " + modulo);
-}
-</script>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="search">
+
+                <i class="fa-solid fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Pesquisar...">
+
+            </div>
+
+            <div class="header-actions">
+
+                <button id="themeButton">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/60"
+                        alt="Perfil">
+
+                    <div>
+
+                        <h4>Administrador</h4>
+                        <small>Online</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <h1>Painel Administrativo</h1>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h2 id="clientes">
+                        0
+                    </h2>
+
+                    <p>Clientes</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <h2 id="funcionarios">
+                        0
+                    </h2>
+
+                    <p>Funcionários</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <h2 id="estoque">
+                        0
+                    </h2>
+
+                    <p>Produtos</p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-dollar-sign"></i>
+
+                    <h2 id="financeiro">
+                        R$ 0
+                    </h2>
+
+                    <p>Receita</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TABELA -->
+
+        <section class="table-section">
+
+            <h2>Últimos Clientes</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tableClients">
+
+                    <tr>
+
+                        <td>João Silva</td>
+                        <td>joao@email.com</td>
+                        <td>
+                            Ativo
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Maria Souza</td>
+                        <td>maria@email.com</td>
+                        <td>
+                            Ativo
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Carlos Oliveira</td>
+                        <td>carlos@email.com</td>
+                        <td>
+                            Pendente
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
