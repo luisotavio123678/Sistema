@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clientes | Seu Copo Bar & Chopp</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+.content{
+padding:30px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+form{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+input,select{
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+}
+
+button{
+
+padding:12px;
+
+background:#D4AF37;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+th{
+
+background:#111;
+
+color:#fff;
+
+padding:12px;
+
+}
+
+td{
+
+padding:12px;
+
+text-align:center;
+
+border-bottom:1px solid #ddd;
+
+}
+
+.vip{
+
+color:green;
+
+font-weight:bold;
+
+}
+
+.normal{
+
+color:#555;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+🍺 Seu Copo
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="produtos.html">Produtos</a></li>
+
+<li><a href="pedidos.html">Pedidos</a></li>
+
+<li class="active"><a href="#">Clientes</a></li>
+
+<li><a href="estoque.html">Estoque</a></li>
+
+<li><a href="financeiro.html">Financeiro</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>Cadastro de Clientes</h1>
+
+<form id="clienteForm">
+
+<input
+id="nome"
+placeholder="Nome Completo"
+required>
+
+<input
+id="telefone"
+placeholder="Telefone"
+required>
+
+<input
+id="email"
+type="email"
+placeholder="E-mail">
+
+<input
+id="aniversario"
+type="date">
+
+<select id="categoria">
+
+<option>Cliente</option>
+
+<option>VIP</option>
+
+<option>Premium</option>
+
+</select>
+
+<button>
+
+Cadastrar Cliente
+
+</button>
+
+</form>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Nome</th>
+
+<th>Telefone</th>
+
+<th>E-mail</th>
+
+<th>Aniversário</th>
+
+<th>Categoria</th>
+
+<th>Pontos</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="clientes">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+let id = 1;
+
+const tabela = document.getElementById("clientes");
+
+document.getElementById("clienteForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const nome=document.getElementById("nome").value;
+
+const telefone=document.getElementById("telefone").value;
+
+const email=document.getElementById("email").value;
+
+const aniversario=document.getElementById("aniversario").value;
+
+const categoria=document.getElementById("categoria").value;
+
+const pontos=Math.floor(Math.random()*1000);
+
+const classe=categoria==="VIP"||categoria==="Premium"?"vip":"normal";
+
+const tr=document.createElement("tr");
+
+tr.innerHTML=`
+
+<td>${id++}</td>
+
+<td>${nome}</td>
+
+<td>${telefone}</td>
+
+<td>${email}</td>
+
+<td>${aniversario}</td>
+
+<td class="${classe}">${categoria}</td>
+
+<td>${pontos}</td>
+
+<td>
+
+<button onclick="editar(this)">Editar</button>
+
+<button onclick="remover(this)">Excluir</button>
+
+</td>
+
+`;
+
+tabela.prepend(tr);
+
+this.reset();
+
+});
+
+function remover(botao){
+
+if(confirm("Excluir cliente?")){
+
+botao.parentElement.parentElement.remove();
+
+}
+
+}
+
+function editar(botao){
+
+const linha=botao.parentElement.parentElement;
+
+alert("Editar cadastro de "+linha.children[1].innerText);
+
+}
+
+</script>
+
+</body>
+
+</html>
