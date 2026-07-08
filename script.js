@@ -1,237 +1,286 @@
-// ========================================
-// Enterprise System
-// script.js
-// ========================================
+/* =====================================
+   SEU COPO BAR & CHOPP
+   SCRIPT.JS
+===================================== */
 
-// Contadores do Dashboard
-const dados = {
-    clientes: 1280,
-    funcionarios: 86,
-    estoque: 452,
-    financeiro: 987650
-};
-
-function animarNumero(id, valor, prefixo = "", sufixo = "") {
-    const elemento = document.getElementById(id);
-    if (!elemento) return;
-
-    let atual = 0;
-    const incremento = Math.max(1, Math.ceil(valor / 120));
-
-    const intervalo = setInterval(() => {
-        atual += incremento;
-
-        if (atual >= valor) {
-            atual = valor;
-            clearInterval(intervalo);
-        }
-
-        if (id === "financeiro") {
-            elemento.innerHTML =
-                prefixo +
-                atual.toLocaleString("pt-BR") +
-                sufixo;
-        } else {
-            elemento.innerHTML =
-                prefixo +
-                atual +
-                sufixo;
-        }
-
-    }, 15);
-}
+// ===============================
+// Loader
+// ===============================
 
 window.addEventListener("load", () => {
 
-    animarNumero("clientes", dados.clientes);
-
-    animarNumero("funcionarios", dados.funcionarios);
-
-    animarNumero("estoque", dados.estoque);
-
-    animarNumero("financeiro", dados.financeiro, "R$ ");
-
-});
-
-// ========================================
-// Tema Escuro
-// ========================================
-
-const themeButton = document.getElementById("themeButton");
-
-const temaSalvo = localStorage.getItem("tema");
-
-if (temaSalvo === "dark") {
-    document.body.classList.add("dark");
-
-    if (themeButton) {
-        themeButton.innerHTML =
-            '<i class="fa-solid fa-sun"></i>';
-    }
-}
-
-if (themeButton) {
-
-    themeButton.addEventListener("click", () => {
-
-        document.body.classList.toggle("dark");
-
-        const escuro =
-            document.body.classList.contains("dark");
-
-        localStorage.setItem(
-            "tema",
-            escuro ? "dark" : "light"
-        );
-
-        themeButton.innerHTML = escuro
-            ? '<i class="fa-solid fa-sun"></i>'
-            : '<i class="fa-solid fa-moon"></i>';
-
-    });
-
-}
-
-// ========================================
-// Pesquisa na tabela
-// ========================================
-
-const pesquisa = document.querySelector(".search input");
-
-if (pesquisa) {
-
-    pesquisa.addEventListener("keyup", function () {
-
-        const texto = this.value.toLowerCase();
-
-        const linhas = document.querySelectorAll("#tableClients tr");
-
-        linhas.forEach((linha) => {
-
-            const conteudo =
-                linha.innerText.toLowerCase();
-
-            linha.style.display =
-                conteudo.includes(texto)
-                    ? ""
-                    : "none";
-
-        });
-
-    });
-
-}
-
-// ========================================
-// Notificação
-// ========================================
-
-function criarNotificacao(mensagem) {
-
-    const aviso = document.createElement("div");
-
-    aviso.className = "notification";
-
-    aviso.innerHTML = mensagem;
-
-    document.body.appendChild(aviso);
+    const loader = document.getElementById("loader");
 
     setTimeout(() => {
 
-        aviso.classList.add("show");
+        loader.style.opacity = "0";
 
-    }, 100);
-
-    setTimeout(() => {
-
-        aviso.classList.remove("show");
+        loader.style.pointerEvents = "none";
 
         setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
 
-            aviso.remove();
-
-        }, 400);
-
-    }, 3500);
-
-}
-
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-        criarNotificacao("✅ Sistema iniciado com sucesso.");
-
-    }, 800);
+    }, 1000);
 
 });
 
-// ========================================
-// Relógio
-// ========================================
+// ===============================
+// Menu Mobile
+// ===============================
 
-function atualizarTitulo() {
+const menuButton = document.querySelector(".btn-menu");
+const menu = document.querySelector(".menu");
 
-    const agora = new Date();
+menuButton.addEventListener("click", () => {
 
-    document.title =
-        agora.toLocaleTimeString("pt-BR") +
-        " • Enterprise System";
+    menu.classList.toggle("active");
 
-}
+});
 
-setInterval(atualizarTitulo, 1000);
+// ===============================
+// Navbar Scroll
+// ===============================
 
-// ========================================
-// Saudação
-// ========================================
+const navbar = document.querySelector(".navbar");
 
-const hora = new Date().getHours();
+window.addEventListener("scroll", () => {
 
-let saudacao = "Bem-vindo!";
+    if (window.scrollY > 80) {
 
-if (hora < 12) {
+        navbar.style.background = "rgba(0,0,0,.95)";
+        navbar.style.padding = "15px 8%";
+        navbar.style.transition = ".4s";
 
-    saudacao = "Bom dia!";
+    } else {
 
-} else if (hora < 18) {
+        navbar.style.background = "rgba(0,0,0,.75)";
+        navbar.style.padding = "20px 8%";
 
-    saudacao = "Boa tarde!";
+    }
 
-} else {
+});
 
-    saudacao = "Boa noite!";
+// ===============================
+// Scroll Suave
+// ===============================
 
-}
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-console.log(saudacao + " Sistema carregado com sucesso.");
+    link.addEventListener("click", function(e) {
 
-// ========================================
-// Cards animados
-// ========================================
+        e.preventDefault();
 
-const cards = document.querySelectorAll(".card");
+        const destino = document.querySelector(this.getAttribute("href"));
 
-cards.forEach((card) => {
+        if(destino){
 
-    card.addEventListener("mouseenter", () => {
+            destino.scrollIntoView({
 
-        card.style.transform =
-            "translateY(-8px) scale(1.02)";
+                behavior:"smooth"
 
-    });
+            });
 
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform =
-            "translateY(0) scale(1)";
+        }
 
     });
 
 });
 
-// ========================================
-// Final
-// ========================================
+// ===============================
+// Botão Voltar ao Topo
+// ===============================
 
-console.log("Enterprise System 2026");
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "↑";
+
+topButton.id = "topButton";
+
+document.body.appendChild(topButton);
+
+topButton.style.position = "fixed";
+topButton.style.right = "25px";
+topButton.style.bottom = "100px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.borderRadius = "50%";
+topButton.style.border = "none";
+topButton.style.cursor = "pointer";
+topButton.style.background = "#d4af37";
+topButton.style.color = "#000";
+topButton.style.fontSize = "22px";
+topButton.style.display = "none";
+topButton.style.boxShadow = "0 10px 20px rgba(0,0,0,.3)";
+topButton.style.zIndex = "999";
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 400){
+
+        topButton.style.display = "block";
+
+    }else{
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+topButton.addEventListener("click", ()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+// ===============================
+// Revelar Elementos
+// ===============================
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll("section,.card,.testimonial,.photo").forEach(el=>{
+
+    el.style.opacity="0";
+    el.style.transform="translateY(50px)";
+    el.style.transition=".8s";
+
+    observer.observe(el);
+
+});
+
+// ===============================
+// Contador Animado
+// ===============================
+
+const numeros = document.querySelectorAll(".numero");
+
+numeros.forEach(numero=>{
+
+    const atualizar=()=>{
+
+        const alvo=+numero.dataset.target;
+
+        const valor=+numero.innerText;
+
+        const incremento=alvo/150;
+
+        if(valor<alvo){
+
+            numero.innerText=Math.ceil(valor+incremento);
+
+            setTimeout(atualizar,15);
+
+        }else{
+
+            numero.innerText=alvo;
+
+        }
+
+    }
+
+    atualizar();
+
+});
+
+// ===============================
+// Mensagem Reserva
+// ===============================
+
+const form = document.querySelector("form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert("✅ Sua solicitação de reserva foi enviada com sucesso! Em breve entraremos em contato.");
+
+form.reset();
+
+});
+
+}
+
+// ===============================
+// Relógio Funcionamento
+// ===============================
+
+function verificarHorario(){
+
+    const hora = new Date().getHours();
+
+    if(hora >= 17 && hora <= 23){
+
+        console.log("Bar Aberto 🍺");
+
+    }else{
+
+        console.log("Bar Fechado");
+
+    }
+
+}
+
+verificarHorario();
+
+// ===============================
+// Ano automático
+// ===============================
+
+const ano = new Date().getFullYear();
+
+const footer = document.querySelector("footer p:last-child");
+
+if(footer){
+
+footer.innerHTML = `© ${ano} Seu Copo Bar & Chopp - Todos os direitos reservados.`;
+
+}
+
+// ===============================
+// Efeito Botões
+// ===============================
+
+document.querySelectorAll("button,.btn-primary,.btn-secondary").forEach(botao=>{
+
+botao.addEventListener("mouseenter",()=>{
+
+botao.style.transform="scale(1.05)";
+
+});
+
+botao.addEventListener("mouseleave",()=>{
+
+botao.style.transform="scale(1)";
+
+});
+
+});
+
+// ===============================
+// Console
+// ===============================
+
+console.log("🍺 Sistema Seu Copo Bar & Chopp carregado com sucesso!");
