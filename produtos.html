@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Produtos | Seu Copo Bar & Chopp</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+🍺 Seu Copo
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+<li class="active"><a href="#"><i class="fa-solid fa-beer-mug-empty"></i> Produtos</a></li>
+
+<li><a href="pedidos.html"><i class="fa-solid fa-cart-shopping"></i> Pedidos</a></li>
+
+<li><a href="estoque.html"><i class="fa-solid fa-box"></i> Estoque</a></li>
+
+<li><a href="clientes.html"><i class="fa-solid fa-users"></i> Clientes</a></li>
+
+<li><a href="reservas.html"><i class="fa-solid fa-calendar"></i> Reservas</a></li>
+
+<li><a href="financeiro.html"><i class="fa-solid fa-money-bill-wave"></i> Financeiro</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<header>
+
+<h1>Cadastro de Produtos</h1>
+
+</header>
+
+<section class="cadastro">
+
+<form id="produtoForm">
+
+<input
+type="text"
+id="nome"
+placeholder="Nome do Produto"
+required>
+
+<input
+type="number"
+id="preco"
+placeholder="Preço"
+step="0.01"
+required>
+
+<select id="categoria">
+
+<option>Chopp</option>
+
+<option>Drink</option>
+
+<option>Refrigerante</option>
+
+<option>Petisco</option>
+
+<option>Hambúrguer</option>
+
+<option>Sobremesa</option>
+
+</select>
+
+<input
+type="number"
+id="estoque"
+placeholder="Quantidade em Estoque"
+required>
+
+<button type="submit">
+
+<i class="fa-solid fa-plus"></i>
+
+Cadastrar Produto
+
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Lista de Produtos</h2>
+
+<table id="tabelaProdutos">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Produto</th>
+
+<th>Categoria</th>
+
+<th>Preço</th>
+
+<th>Estoque</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</section>
+
+</div>
+
+<script>
+
+let contador = 1;
+
+const tbody = document.querySelector("#tabelaProdutos tbody");
+
+document.getElementById("produtoForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const nome = document.getElementById("nome").value;
+
+const preco = document.getElementById("preco").value;
+
+const categoria = document.getElementById("categoria").value;
+
+const estoque = document.getElementById("estoque").value;
+
+const linha = document.createElement("tr");
+
+linha.innerHTML = `
+
+<td>${contador}</td>
+
+<td>${nome}</td>
+
+<td>${categoria}</td>
+
+<td>R$ ${Number(preco).toFixed(2)}</td>
+
+<td>${estoque}</td>
+
+<td>
+
+<button onclick="editar(this)">Editar</button>
+
+<button onclick="remover(this)">Excluir</button>
+
+</td>
+
+`;
+
+tbody.appendChild(linha);
+
+contador++;
+
+this.reset();
+
+});
+
+function remover(botao){
+
+botao.parentElement.parentElement.remove();
+
+}
+
+function editar(botao){
+
+const linha = botao.parentElement.parentElement;
+
+const produto = linha.children[1].innerText;
+
+alert("Editar produto: " + produto + "\n(Esta função será integrada ao banco de dados futuramente.)");
+
+}
+
+</script>
+
+</body>
+
+</html>
