@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Controle de Estoque | Seu Copo Bar & Chopp</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+.status-ok{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.status-baixo{
+    color:#dc2626;
+    font-weight:bold;
+}
+
+input,select{
+    padding:10px;
+    margin:5px;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+🍺 Seu Copo
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+
+<li><a href="produtos.html">Produtos</a></li>
+
+<li class="active"><a href="#">Estoque</a></li>
+
+<li><a href="pedidos.html">Pedidos</a></li>
+
+<li><a href="clientes.html">Clientes</a></li>
+
+<li><a href="financeiro.html">Financeiro</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>Controle de Estoque</h1>
+
+<form id="estoqueForm">
+
+<input
+id="produto"
+placeholder="Produto"
+required>
+
+<input
+id="quantidade"
+type="number"
+placeholder="Quantidade"
+required>
+
+<select id="tipo">
+
+<option value="Entrada">Entrada</option>
+
+<option value="Saída">Saída</option>
+
+</select>
+
+<button>
+
+Registrar Movimentação
+
+</button>
+
+</form>
+
+<table id="tabela">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Produto</th>
+
+<th>Tipo</th>
+
+<th>Quantidade</th>
+
+<th>Saldo</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+let estoque = {};
+
+let id = 1;
+
+const tbody = document.querySelector("tbody");
+
+document.getElementById("estoqueForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const produto=document.getElementById("produto").value;
+
+const quantidade=parseInt(document.getElementById("quantidade").value);
+
+const tipo=document.getElementById("tipo").value;
+
+if(!estoque[produto]){
+
+estoque[produto]=0;
+
+}
+
+if(tipo==="Entrada"){
+
+estoque[produto]+=quantidade;
+
+}else{
+
+estoque[produto]-=quantidade;
+
+if(estoque[produto]<0){
+
+estoque[produto]=0;
+
+}
+
+}
+
+const saldo=estoque[produto];
+
+const status=saldo<=10
+?'<span class="status-baixo">Baixo</span>'
+:'<span class="status-ok">Normal</span>';
+
+const tr=document.createElement("tr");
+
+tr.innerHTML=`
+
+<td>${id++}</td>
+
+<td>${produto}</td>
+
+<td>${tipo}</td>
+
+<td>${quantidade}</td>
+
+<td>${saldo}</td>
+
+<td>${status}</td>
+
+`;
+
+tbody.prepend(tr);
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+
+</html>
