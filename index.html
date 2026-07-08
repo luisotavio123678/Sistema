@@ -4,238 +4,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise System</title>
 
+    <title>Seu Copo Bar e Chopp | Choperia Premium</title>
+
+    <meta name="description"
+        content="Seu Copo Bar e Chopp - A melhor experiência em chopp artesanal, gastronomia e entretenimento.">
+
+    <meta name="keywords"
+        content="bar, chopp, cerveja artesanal, hamburguer, drinks, restaurante, premium">
+
+    <meta name="author" content="Seu Copo Bar e Chopp">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <!-- Loader -->
+    <div id="loader">
+        <h1>Seu Copo</h1>
+    </div>
 
-        <div class="logo">
-            <i class="fa-solid fa-building"></i>
-            <span>Enterprise</span>
-        </div>
+    <!-- Cabeçalho -->
+    <header>
 
-        <nav>
+        <nav class="navbar">
 
-            <a href="#" class="active">
-                <i class="fa-solid fa-house"></i>
-                Dashboard
-            </a>
+            <div class="logo">
+                🍺 Seu Copo
+            </div>
 
-            <a href="#">
-                <i class="fa-solid fa-users"></i>
-                Clientes
-            </a>
+            <ul class="menu">
 
-            <a href="#">
-                <i class="fa-solid fa-user-tie"></i>
-                Funcionários
-            </a>
+                <li><a href="#home">Início</a></li>
 
-            <a href="#">
-                <i class="fa-solid fa-box"></i>
-                Estoque
-            </a>
+                <li><a href="#sobre">Sobre</a></li>
 
-            <a href="#">
-                <i class="fa-solid fa-money-bill-wave"></i>
-                Financeiro
-            </a>
+                <li><a href="#cardapio">Cardápio</a></li>
 
-            <a href="#">
-                <i class="fa-solid fa-chart-line"></i>
-                Relatórios
-            </a>
+                <li><a href="#galeria">Galeria</a></li>
 
-            <a href="#">
-                <i class="fa-solid fa-calendar-days"></i>
-                Agenda
-            </a>
+                <li><a href="#avaliacoes">Avaliações</a></li>
 
-            <a href="#">
-                <i class="fa-solid fa-gear"></i>
-                Configurações
-            </a>
+                <li><a href="#contato">Contato</a></li>
+
+            </ul>
+
+            <button class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </nav>
 
-    </aside>
+    </header>
 
-    <!-- MAIN -->
-    <main>
+    <!-- HOME -->
 
-        <!-- HEADER -->
-        <header>
+    <section class="hero" id="home">
 
-            <div class="search">
+        <div class="hero-text">
 
-                <i class="fa-solid fa-search"></i>
+            <span>Choperia Premium</span>
 
-                <input
-                    type="text"
-                    placeholder="Pesquisar...">
+            <h1>
 
-            </div>
+                Seu Copo
+                <br>
+                Bar & Chopp
 
-            <div class="header-actions">
+            </h1>
 
-                <button id="themeButton">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+            <p>
 
-                <button>
-                    <i class="fa-solid fa-bell"></i>
-                </button>
+                Experimente uma seleção exclusiva de chopps,
+                drinks e gastronomia premium em um ambiente
+                elegante, moderno e acolhedor.
 
-                <div class="profile">
+            </p>
 
-                    <img src="https://i.pravatar.cc/60"
-                        alt="Perfil">
+            <div class="buttons">
 
-                    <div>
+                <a href="#cardapio" class="btn-primary">
+                    Ver Cardápio
+                </a>
 
-                        <h4>Administrador</h4>
-                        <small>Online</small>
-
-                    </div>
-
-                </div>
+                <a href="#contato" class="btn-secondary">
+                    Reservar Mesa
+                </a>
 
             </div>
 
-        </header>
+        </div>
 
-        <!-- DASHBOARD -->
+    </section>
 
-        <section class="dashboard">
+    <!-- SOBRE -->
 
-            <h1>Painel Administrativo</h1>
+    <section id="sobre" class="about">
 
-            <div class="cards">
+        <div class="container">
 
-                <div class="card">
+            <h2>Sobre Nós</h2>
 
-                    <i class="fa-solid fa-users"></i>
+            <p>
 
-                    <h2 id="clientes">
-                        0
-                    </h2>
+                A Seu Copo Bar e Chopp nasceu para proporcionar
+                experiências inesquecíveis.
 
-                    <p>Clientes</p>
+                Unimos gastronomia premium, chopps especiais,
+                drinks exclusivos e atendimento de excelência.
 
-                </div>
+            </p>
 
-                <div class="card">
+        </div>
 
-                    <i class="fa-solid fa-user-tie"></i>
+    </section>
 
-                    <h2 id="funcionarios">
-                        0
-                    </h2>
+    <!-- CARDÁPIO -->
 
-                    <p>Funcionários</p>
+    <section id="cardapio" class="menu-section">
 
-                </div>
+        <h2>Nosso Cardápio</h2>
 
-                <div class="card">
+        <div class="cards">
 
-                    <i class="fa-solid fa-box"></i>
+            <div class="card">
 
-                    <h2 id="estoque">
-                        0
-                    </h2>
+                <i class="fa-solid fa-beer-mug-empty"></i>
 
-                    <p>Produtos</p>
+                <h3>Chopps</h3>
 
-                </div>
-
-                <div class="card">
-
-                    <i class="fa-solid fa-dollar-sign"></i>
-
-                    <h2 id="financeiro">
-                        R$ 0
-                    </h2>
-
-                    <p>Receita</p>
-
-                </div>
+                <p>Mais de 20 opções nacionais e importadas.</p>
 
             </div>
 
-        </section>
+            <div class="card">
 
-        <!-- TABELA -->
+                <i class="fa-solid fa-wine-glass"></i>
 
-        <section class="table-section">
+                <h3>Drinks</h3>
 
-            <h2>Últimos Clientes</h2>
+                <p>Clássicos e autorais preparados por bartenders.</p>
 
-            <table>
+            </div>
 
-                <thead>
+            <div class="card">
 
-                    <tr>
+                <i class="fa-solid fa-burger"></i>
 
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Status</th>
+                <h3>Hambúrgueres</h3>
 
-                    </tr>
+                <p>Artesanais preparados na brasa.</p>
 
-                </thead>
+            </div>
 
-                <tbody id="tableClients">
+            <div class="card">
 
-                    <tr>
+                <i class="fa-solid fa-pizza-slice"></i>
 
-                        <td>João Silva</td>
-                        <td>joao@email.com</td>
-                        <td>
-                            Ativo
-                        </td>
+                <h3>Petiscos</h3>
 
-                    </tr>
+                <p>Entradas especiais para compartilhar.</p>
 
-                    <tr>
+            </div>
 
-                        <td>Maria Souza</td>
-                        <td>maria@email.com</td>
-                        <td>
-                            Ativo
-                        </td>
+        </div>
 
-                    </tr>
+    </section>
 
-                    <tr>
+    <!-- GALERIA -->
 
-                        <td>Carlos Oliveira</td>
-                        <td>carlos@email.com</td>
-                        <td>
-                            Pendente
-                        </td>
+    <section id="galeria">
 
-                    </tr>
+        <h2>Galeria</h2>
 
-                </tbody>
+        <div class="gallery">
 
-            </table>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+
+    <section id="avaliacoes">
+
+        <h2>O que nossos clientes dizem</h2>
+
+        <div class="testimonials">
+
+            <div class="testimonial">
+
+                ⭐⭐⭐⭐⭐
+
+                <p>
+
+                    Melhor chopp da cidade.
+                    Ambiente sofisticado e atendimento impecável.
+
+                </p>
+
+                <strong>— Carlos Henrique</strong>
+
+            </div>
+
+            <div class="testimonial">
+
+                ⭐⭐⭐⭐⭐
+
+                <p>
+
+                    Lugar incrível.
+                    Voltarei muitas vezes.
+
+                </p>
+
+                <strong>— Juliana Souza</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+
+        <h2>Faça sua Reserva</h2>
+
+        <form>
+
+            <input type="text" placeholder="Nome">
+
+            <input type="email" placeholder="E-mail">
+
+            <input type="tel" placeholder="Telefone">
+
+            <textarea placeholder="Mensagem"></textarea>
+
+            <button>
+
+                Reservar Agora
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Seu Copo Bar & Chopp</h2>
+
+            <p>
+
+                Sofisticação, qualidade e experiências únicas.
+
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+            <p>
+
+                © 2026 Seu Copo Bar e Chopp.
+                Todos os direitos reservados.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Botão WhatsApp -->
+
+    <a href="#" class="whatsapp">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+    <!-- JavaScript -->
 
     <script src="script.js"></script>
 
