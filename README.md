@@ -1,65 +1,34 @@
-# 🏢 Enterprise System
+# 🍺 Seu Copo Bar & Chopp
 
-> Um sistema empresarial moderno, responsivo e interativo desenvolvido com HTML5, CSS3 e JavaScript.
+> **Elegância, sabor e experiências inesquecíveis.**
 
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-22c55e?style=for-the-badge)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+Um sistema institucional moderno, minimalista e responsivo desenvolvido para a **Seu Copo Bar & Chopp**, uma choperia premium focada em oferecer uma experiência sofisticada aos seus clientes.
 
 ---
 
-# 📋 Sobre
+## ✨ Demonstração
 
-O **Enterprise System** é um painel administrativo moderno criado para servir como base para sistemas empresariais.
-
-O projeto possui uma interface elegante, animações suaves, tema claro/escuro, dashboard e estrutura preparada para integração com APIs e bancos de dados.
+![Banner](assets/banner.jpg)
 
 ---
 
-# ✨ Funcionalidades
+# 🚀 Funcionalidades
 
-- 📊 Dashboard Administrativo
-- 👥 Gestão de Clientes
-- 👨‍💼 Gestão de Funcionários
-- 📦 Controle de Estoque
-- 💰 Financeiro
-- 📈 Relatórios
-- 🔔 Notificações
-- 🌙 Tema Escuro
-- ☀️ Tema Claro
-- 🔍 Pesquisa em tempo real
-- 📱 Layout Responsivo
-- ⚡ Interface rápida
-- 🎨 Design moderno
-- 📂 Estrutura organizada
-
----
-
-# 📁 Estrutura do Projeto
-
-```
-enterprise-system/
-
-│
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-│
-├── assets/
-│
-├── css/
-│
-├── js/
-│
-├── images/
-│
-├── icons/
-│
-└── fonts/
-```
+- ✅ Página Inicial Premium
+- ✅ Layout Responsivo
+- ✅ Design Moderno
+- ✅ Navbar Inteligente
+- ✅ Loader Animado
+- ✅ Rolagem Suave
+- ✅ Hero Banner
+- ✅ Cardápio
+- ✅ Galeria
+- ✅ Avaliações
+- ✅ Formulário de Reservas
+- ✅ Botão WhatsApp
+- ✅ Footer Premium
+- ✅ SEO Básico
+- ✅ Código Organizado
 
 ---
 
@@ -73,131 +42,167 @@ enterprise-system/
 
 ---
 
-# 🚀 Instalação
+# 📂 Estrutura do Projeto
 
-Clone o repositório
+```
+Seu-Copo-Bar-e-Chopp/
+
+│
+
+├── index.html
+
+├── style.css
+
+├── script.js
+
+├── README.md
+
+│
+
+└── assets/
+
+    ├── banner.jpg
+
+    ├── logo.png
+
+    ├── galeria/
+
+    └── imagens/
+```
+
+---
+
+# 📱 Responsividade
+
+O sistema foi desenvolvido para funcionar em:
+
+- 💻 Desktop
+- 💼 Notebook
+- 📱 Smartphones
+- 📲 Tablets
+
+---
+
+# 🎨 Paleta de Cores
+
+| Cor | Código |
+|------|---------|
+| Preto | #0F0F0F |
+| Dourado | #D4AF37 |
+| Branco | #FFFFFF |
+| Cinza | #181818 |
+
+---
+
+# 🍻 Sobre a Empresa
+
+A **Seu Copo Bar & Chopp** nasceu com o objetivo de proporcionar momentos únicos por meio de um ambiente sofisticado, atendimento de excelência, gastronomia de qualidade e uma seleção especial de chopps e drinks.
+
+Nossa missão é transformar cada visita em uma experiência memorável.
+
+---
+
+# 📸 Recursos
+
+- Hero Banner
+- Cards Animados
+- Galeria
+- Botões Interativos
+- Animações
+- Menu Responsivo
+- Loader
+- WhatsApp
+- Reservas
+- Scroll Suave
+
+---
+
+# ⚙️ Como Executar
+
+Clone o projeto.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/enterprise-system.git
+git clone https://github.com/SEU-USUARIO/seu-copo-bar-e-chopp.git
 ```
 
-Entre na pasta
+Entre na pasta.
 
 ```bash
-cd enterprise-system
+cd seu-copo-bar-e-chopp
 ```
 
-Abra o arquivo
+Abra o arquivo.
 
-```
+```text
 index.html
 ```
 
 ---
 
-# 📸 Preview
+# 📈 Futuras Atualizações
 
-```
-🏢 Dashboard
+- Login Administrativo
 
-✔ Clientes
-✔ Funcionários
-✔ Estoque
-✔ Financeiro
+- Painel Financeiro
 
-🌙 Tema Escuro
+- Reserva Online
 
-📊 Cards Animados
+- Cardápio Dinâmico
 
-📱 Responsivo
-```
-
----
-
-# 🎯 Recursos
-
-- Interface Premium
-- Dashboard Moderno
-- Código Limpo
-- Fácil manutenção
-- Alta performance
-- Componentes reutilizáveis
-- Design responsivo
-- Animações suaves
-
----
-
-# 🔮 Próximas Atualizações
-
-- Login
-- Cadastro de usuários
 - Banco de Dados
-- API REST
-- Exportação em PDF
-- Exportação em Excel
-- Upload de arquivos
-- Gráficos em tempo real
-- Controle financeiro avançado
-- Agenda
-- Calendário
-- Chat interno
-- Multiempresa
 
----
+- Área do Cliente
 
-# 🤝 Contribuição
+- Área do Funcionário
 
-Contribuições são bem-vindas.
+- Dashboard
 
-Faça um Fork.
+- API WhatsApp
 
-Crie uma Branch.
+- Sistema de Pedidos
 
-```bash
-git checkout -b minha-feature
-```
+- PIX
 
-Commit
+- Cartão Fidelidade
 
-```bash
-git commit -m "Nova funcionalidade"
-```
+- Delivery
 
-Push
+- Dashboard Administrativo
 
-```bash
-git push origin minha-feature
-```
+- QR Code para Mesas
 
-Abra um Pull Request.
-
----
-
-# ⭐ Apoie
-
-Se este projeto foi útil, deixe uma ⭐ no repositório.
-
----
-
-# 📄 Licença
-
-Distribuído sob a licença MIT.
+- Sistema de Caixa
 
 ---
 
 # 👨‍💻 Desenvolvedor
 
-**Seu Nome**
+Projeto desenvolvido para a empresa:
 
-GitHub:
+# 🍺 Seu Copo Bar & Chopp
 
-```
-https://github.com/SEU-USUARIO
-```
+Sistema Web Premium.
 
 ---
 
-## Obrigado por visitar este projeto!
+# 📄 Licença
 
-🚀 Enterprise System
-Desenvolvido com HTML, CSS e JavaScript.
+Este projeto está licenciado sob a licença MIT.
+
+Sinta-se livre para utilizar e modificar.
+
+---
+
+# ⭐ Gostou?
+
+Se este projeto foi útil, deixe uma ⭐ no repositório.
+
+Isso ajuda no crescimento do projeto.
+
+---
+
+## 🍻 Seu Copo Bar & Chopp
+
+### Muito mais que um bar.
+
+### Uma experiência Premium.
