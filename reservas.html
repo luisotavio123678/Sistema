@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reservas | Seu Copo Bar & Chopp</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.content{
+    padding:30px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-bottom:30px;
+}
+
+input,
+select,
+button{
+
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+
+}
+
+button{
+
+    background:#D4AF37;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#111;
+    color:#fff;
+    padding:12px;
+
+}
+
+td{
+
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+
+}
+
+.confirmada{
+
+color:#16a34a;
+font-weight:bold;
+
+}
+
+.pendente{
+
+color:#f59e0b;
+font-weight:bold;
+
+}
+
+.cancelada{
+
+color:#dc2626;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+🍺 Seu Copo
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="produtos.html">Produtos</a></li>
+<li><a href="pedidos.html">Pedidos</a></li>
+<li><a href="clientes.html">Clientes</a></li>
+<li><a href="estoque.html">Estoque</a></li>
+<li><a href="financeiro.html">Financeiro</a></li>
+<li class="active"><a href="#">Reservas</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>Reservas de Mesas</h1>
+
+<form id="reservaForm">
+
+<input
+id="cliente"
+placeholder="Nome do Cliente"
+required>
+
+<input
+id="telefone"
+placeholder="Telefone"
+required>
+
+<input
+id="data"
+type="date"
+required>
+
+<input
+id="hora"
+type="time"
+required>
+
+<input
+id="pessoas"
+type="number"
+min="1"
+placeholder="Quantidade de Pessoas"
+required>
+
+<select id="mesa">
+
+<option>Mesa 01</option>
+<option>Mesa 02</option>
+<option>Mesa 03</option>
+<option>Mesa 04</option>
+<option>Mesa 05</option>
+<option>Mesa VIP 01</option>
+<option>Mesa VIP 02</option>
+
+</select>
+
+<button>
+
+Reservar Mesa
+
+</button>
+
+</form>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Cliente</th>
+
+<th>Telefone</th>
+
+<th>Data</th>
+
+<th>Hora</th>
+
+<th>Mesa</th>
+
+<th>Pessoas</th>
+
+<th>Status</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaReservas">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+let id=1;
+
+const tabela=document.getElementById("listaReservas");
+
+document.getElementById("reservaForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const cliente=document.getElementById("cliente").value;
+
+const telefone=document.getElementById("telefone").value;
+
+const data=document.getElementById("data").value;
+
+const hora=document.getElementById("hora").value;
+
+const pessoas=document.getElementById("pessoas").value;
+
+const mesa=document.getElementById("mesa").value;
+
+const tr=document.createElement("tr");
+
+tr.innerHTML=`
+
+<td>${id++}</td>
+
+<td>${cliente}</td>
+
+<td>${telefone}</td>
+
+<td>${data}</td>
+
+<td>${hora}</td>
+
+<td>${mesa}</td>
+
+<td>${pessoas}</td>
+
+<td class="pendente">Pendente</td>
+
+<td>
+
+<button onclick="confirmar(this)">Confirmar</button>
+
+<button onclick="cancelar(this)">Cancelar</button>
+
+<button onclick="remover(this)">Excluir</button>
+
+</td>
+
+`;
+
+tabela.prepend(tr);
+
+this.reset();
+
+});
+
+function confirmar(botao){
+
+const status=botao.parentElement.parentElement.children[7];
+
+status.innerHTML="Confirmada";
+
+status.className="confirmada";
+
+}
+
+function cancelar(botao){
+
+const status=botao.parentElement.parentElement.children[7];
+
+status.innerHTML="Cancelada";
+
+status.className="cancelada";
+
+}
+
+function remover(botao){
+
+if(confirm("Deseja excluir esta reserva?")){
+
+botao.parentElement.parentElement.remove();
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
